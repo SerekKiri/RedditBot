@@ -1,8 +1,9 @@
 const Discord = require('discord.js')
 const config = require('./config/config.json')
 
-// commands imports
 
+// commands imports
+const subreddit = require('./commands/subreddit')
 
 const client = new Discord.Client()
 
@@ -15,8 +16,8 @@ client.on('message', async (message) => {
     if (message.content.substring(0, config.Prefix.length) === config.Prefix) {
         const command = message.content.slice(config.Prefix.length);
 
-    if (command === 'find') {
-        message.reply(`I've got you!`)
+    if (message.content.startsWith(config.Prefix + 'find')) {
+        subreddit(message)
     }
 
     }
