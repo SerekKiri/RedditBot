@@ -14,5 +14,8 @@
     "reddit"
   ],
   "author": "SerekKiri & MiXerek",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
