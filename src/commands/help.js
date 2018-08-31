@@ -1,4 +1,4 @@
-function help(message) {
+async function help(message) {
     const embed = {
         title: `Check my crazy commands below!`,
         author: {
@@ -14,7 +14,7 @@ function help(message) {
         icon_url: "https://cdn.discordapp.com/avatars/485047416291065859/ac0087022698709d0c7b26361e056bf9.png?size=256"
         },
     }
-  message.channel.send({ embed })
+  await message.channel.send({ embed })
 }
 
 module.exports = help
