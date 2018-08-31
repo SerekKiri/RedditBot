@@ -16,6 +16,7 @@
   "author": "SerekKiri & MiXerek",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "turndown": "^5.0.1"
   }
 }
