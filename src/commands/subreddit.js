@@ -11,6 +11,15 @@ async function find(message) {
             const json = await axios.get(`https://www.reddit.com/r/${mes}/new.json?limit=2`).then(function (response) {
             // handle success
             text = response.data.data.children[0].data
+            console.log(text.url)
+
+            const extension = ['.jpg', '.png', '.svg']
+            let image
+            if (extension.includes(text.url.slice(-4))) {
+                image = text.url
+            } else {
+                image = null
+            }
             const date = new Date(text.created_utc * 1000)
             const embed = {
                 title: `${text.title}`,
@@ -21,8 +30,8 @@ async function find(message) {
                   },
                 description: turndownService.turndown(text.selftext),
                 timestamp: date,
-                imgage: {
-                    url: ``
+                image: {
+                    url: image
                 },
                 color: 16729344,
                 footer: {
