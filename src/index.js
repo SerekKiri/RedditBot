@@ -4,6 +4,8 @@ const config = require('./config/config.json')
 
 // commands imports
 const subreddit = require('./commands/subreddit')
+const help = require('./commands/help')
+
 
 const client = new Discord.Client()
 
@@ -13,13 +15,13 @@ client.on('ready', () => {
 })
 
 client.on('message', async (message) => {
-    if (message.content.substring(0, config.Prefix.length) === config.Prefix) {
-        const command = message.content.slice(config.Prefix.length);
 
     if (message.content.startsWith(config.Prefix + 'find')) {
         subreddit(message)
     }
 
+    if (message.content.startsWith(config.Prefix + 'help')) {
+        help(message)
     }
 })
 

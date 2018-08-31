@@ -14,31 +14,33 @@ async function find(message) {
             console.log(text.url)
 
             const extension = ['.jpg', '.png', '.svg']
+            const date = new Date(text.created_utc * 1000)
             let image
+
             if (extension.includes(text.url.slice(-4))) {
                 image = text.url
             } else {
                 image = null
             }
-            const date = new Date(text.created_utc * 1000)
-            const embed = {
-                title: `${text.title}`,
-                url: `https://www.reddit.com${text.permalink}`,
-                author: {
-                    name: text.author,
-                    icon_url: "https://i.kym-cdn.com/photos/images/newsfeed/000/919/691/9e0.png"
-                  },
-                description: turndownService.turndown(text.selftext),
-                timestamp: date,
-                image: {
-                    url: image
-                },
-                color: 16729344,
-                footer: {
-                  text: 'Reddit Bot by SerekKiri & MiXereK',
-                  icon_url: "https://cdn.discordapp.com/avatars/485047416291065859/ac0087022698709d0c7b26361e056bf9.png?size=256"
-                },
-              }
+
+                const embed = {
+                    title: `${text.title}`,
+                    url: `https://www.reddit.com${text.permalink}`,
+                    author: {
+                        name: text.author,
+                        icon_url: "https://i.kym-cdn.com/photos/images/newsfeed/000/919/691/9e0.png"
+                    },
+                    description: turndownService.turndown(text.selftext),
+                    timestamp: date,
+                    image: {
+                        url: image
+                    },
+                    color: 16729344,
+                    footer: {
+                    text: 'Reddit Bot by SerekKiri & MiXereK',
+                    icon_url: "https://cdn.discordapp.com/avatars/485047416291065859/ac0087022698709d0c7b26361e056bf9.png?size=256"
+                    },
+                }
               message.channel.send({ embed })
           })
     }
