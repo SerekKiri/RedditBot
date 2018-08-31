@@ -37,7 +37,7 @@ async function find(message) {
                     },
                     color: 16729344,
                     footer: {
-                    text: 'Reddit Bot by SerekKiri & MiXereK',
+                    text: 'Reddit Bot by SerekKiri & MiXerek',
                     icon_url: "https://cdn.discordapp.com/avatars/485047416291065859/ac0087022698709d0c7b26361e056bf9.png?size=256"
                     },
                 }
