@@ -1,0 +1,18 @@
+{
+  "name": "redditbot",
+  "version": "1.0.0",
+  "description": "Discord bot for reddit.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "reddit-bot"
+  },
+  "keywords": [
+    "reddit"
+  ],
+  "author": "SerekKiri & MiXerek",
+  "license": "MIT"
+}
