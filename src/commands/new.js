@@ -18,7 +18,6 @@ async function find(message) {
             const date = new Date(text.created_utc * 1000)
             let image
             let pre
-            console.log(text.selftext)
 
             if (text.preview !== undefined) {
                 pre = text.preview.images[0].source.url
