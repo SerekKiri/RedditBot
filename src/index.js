@@ -10,6 +10,7 @@ const newPost = require('./commands/new')
 const help = require('./commands/help')
 const user = require('./commands/user')
 const top = require('./commands/top')
+const hot = require('./commands/hot')
 
 client.on('ready', () => {
   console.log(`Reddit Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`)
@@ -32,6 +33,10 @@ client.on('message', async (message) => {
 
     if (message.content.startsWith(config.Prefix + 'user')) {
         user(message)
+    }
+
+    if (message.content.startsWith(config.Prefix + 'hot')) {
+        hot(message)
     }
 })
 
