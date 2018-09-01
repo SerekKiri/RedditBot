@@ -14,7 +14,7 @@ const hot = require('./commands/hot')
 
 client.on('ready', () => {
   console.log(`Reddit Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`)
-  client.user.setPresence({ game: { name: 'Reddit', type: 3 } })
+  client.user.setPresence({ game: { name: 'reddit help', type: 1 } })
 })
 
 client.on('message', async (message) => {
