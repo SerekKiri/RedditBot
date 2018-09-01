@@ -27,6 +27,10 @@ To run this bot you need:
     ```
     node index.js
     ```
+    If you want automatically restart the app use nodemon (recommended for development)
+    ```
+    npx nodemon index.js
+    ```
 
 ### Join our discord server
 
