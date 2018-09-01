@@ -4,21 +4,30 @@ const turndownService = new TurndownService()
 
 
 async function find(message) {
-    let mes = message.content.slice(12)
+    let mes = message.content.slice(11)
     if (mes === '') {
         message.reply('You need to type subreddit name here!')
     } else  {
-            const json = await axios.get(`https://www.reddit.com/r/${mes}/new.json?limit=2`).then(function (response) {
+        try {
+ 
+        const json = await axios.get(`https://www.reddit.com/r/${mes}/new.json?limit=1`).then(function (response) {
             // handle success
             text = response.data.data.children[0].data
-            console.log(text.url)
 
             const extension = ['.jpg', '.png', '.svg']
             const date = new Date(text.created_utc * 1000)
             let image
+            let pre
+            console.log(text.selftext)
+
+            if (text.preview !== undefined) {
+                pre = text.preview.images[0].source.url
+            }
 
             if (extension.includes(text.url.slice(-4))) {
                 image = text.url
+            } else if (pre !== null) {
+                image = pre
             } else {
                 image = null
             }
@@ -43,6 +52,10 @@ async function find(message) {
                 }
               message.channel.send({ embed })
           })
+        } catch(Error) {
+            console.log(Error)
+            message.reply(`No subreddits named **${mes}** :confused: `)
+        }      
     }
 }
 
