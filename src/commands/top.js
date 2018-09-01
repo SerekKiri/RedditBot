@@ -20,6 +20,11 @@ async function top(message) {
             const date = new Date(text.created_utc * 1000)
             let image
             let pre
+            let des
+
+            if (text.selftext.length > 1000) {
+                 des = text.selftext.substring(0, 999) + '...'
+            }
 
             if (text.preview !== undefined) {
                 pre = text.preview.images[0].source.url
@@ -40,7 +45,7 @@ async function top(message) {
                         name: text.author,
                         icon_url: "https://i.kym-cdn.com/photos/images/newsfeed/000/919/691/9e0.png"
                     },
-                    description: turndownService.turndown(text.selftext),
+                    description: des,
                     timestamp: date,
                     image: {
                         url: image
