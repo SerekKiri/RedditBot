@@ -19,6 +19,7 @@ client.on('ready', () => {
   client.user.setPresence({ game: { name: 'reddit help', type: 1 } })
 })
 
+
 client.on('message', async (message) => {
 
     if (message.content.startsWith(config.Prefix + 'new')) {
