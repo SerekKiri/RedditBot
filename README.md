@@ -40,10 +40,6 @@ To run this bot you need:
 
 [github.com/fosscord](https://github.com/fosscord)
 
-### Website
-
-[fosscord.github.io](https://fosscord.github.io/)
-
 ### Invite bot on your server
 
 [discordapp.com/oauth2/authorize](https://discordapp.com/oauth2/authorize?client_id=485047416291065859&scope=bot&permissions=0)
