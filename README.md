@@ -34,7 +34,7 @@ To run this bot you need:
 
 ### Join our discord server
 
-[Invite link](https://discord.gg/Wn3zEyh)
+[Invite link](https://discord.gg/7q5VcC6)
 
 ### Organization
 
