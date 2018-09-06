@@ -51,4 +51,3 @@ To run this bot you need:
 ⚠️ Remember about giving bot role with proper permissions! ⚠️
 
 Please report all bugs and your ideas in [issues](https://github.com/SerekKiri/RedditBot/issues). Thanks for your help!
-
