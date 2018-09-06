@@ -48,7 +48,6 @@ To run this bot you need:
 
 [discordapp.com/oauth2/authorize](https://discordapp.com/oauth2/authorize?client_id=485047416291065859&scope=bot&permissions=0)
 
-
 ⚠️ Remember about giving bot role with proper permissions! ⚠️
 
 Please report all bugs and your ideas in [issues](https://github.com/SerekKiri/RedditBot/issues). Thanks for your help!
