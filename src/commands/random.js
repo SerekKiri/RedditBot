@@ -2,22 +2,19 @@ const axios = require("axios");
 const redditPostToEmbed = require("../utils/redditPostToEmbed");
  
 async function find(message) {
-  let mes = message.content.slice(11);
+  let mes = message.content.slice(14);
   let args = mes.split(" ");
 
-  if (mes === "") {
-    message.reply("You need to type subreddit name here!");
-  } else {
    try {
-    if (args[1] <= 10 && args[1] > 0) {
+    if (args[0] <= 10 && args[0] == '') {
         let res
-        if(args[1] === null) {
+        if (args[0] == '') {
             res = await axios.get(
                 `https://www.reddit.com/r/random/top.json?limit=1`
               );
         } else {
             res = await axios.get(
-                `https://www.reddit.com/r/random/top.json?limit=${args[1]}`
+                `https://www.reddit.com/r/random/top.json?limit=${args[0]}`
               );
         }
       
@@ -40,7 +37,6 @@ async function find(message) {
         console.log(Error)
         message.reply(`No subreddits named **${mes}** :confused: `)
         }
-    }
   }
 
 module.exports = find;

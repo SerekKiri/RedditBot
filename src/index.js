@@ -13,6 +13,7 @@ const top = require('./commands/top')
 const hot = require('./commands/hot')
 const github = require('./commands/github')
 const donate = require('./commands/donate')
+const random = require('./commands/random')
 
 client.on('ready', () => {
   console.log(`Reddit Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`)
@@ -48,6 +49,10 @@ client.on('message', async (message) => {
 
     if (message.content.startsWith(config.Prefix + 'donate')) {
         donate(message)
+    }
+
+    if (message.content.startsWith(config.Prefix +  'random')) {
+        random(message)
     }
 })
 

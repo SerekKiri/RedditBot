@@ -9,15 +9,15 @@ async function find(message) {
     message.reply("You need to type subreddit name here!");
   } else {
    try {
-    if (args[1] <= 10) {
-        let res
-        if(args[1] === null) {
+    if (args[1] <= 10 || args[1] == undefined) {
+      let res
+      if(args[1] === undefined) {
             res = await axios.get(
-                `https://www.reddit.com/r/${args[0]}/top.json?limit=1`
+                `https://www.reddit.com/r/${args[0]}/new.json?limit=1`
               );
         } else {
             res = await axios.get(
-                `https://www.reddit.com/r/${args[0]}/top.json?limit=${args[1]}`
+                `https://www.reddit.com/r/${args[0]}/new.json?limit=${args[1]}`
               );
         }
       

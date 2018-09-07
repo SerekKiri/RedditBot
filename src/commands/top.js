@@ -9,9 +9,9 @@ async function find(message) {
     message.reply("You need to type subreddit name here!");
   } else {
    try {
-    if (args[1] <= 10) {
+    if (args[1] <= 10 || args[1] == undefined) {
         let res
-        if(args[1] === null) {
+        if(args[1] === undefined) {
             res = await axios.get(
                 `https://www.reddit.com/r/${args[0]}/top.json?limit=1`
               );
