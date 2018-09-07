@@ -1,68 +1,46 @@
-const axios = require('axios')
-const TurndownService = require('turndown')
-const turndownService = new TurndownService()
-
-
-
-async function top(message) {
-    let mes = message.content.slice(11)
-    
-    if (mes === '') {
-        message.reply('You need to type subreddit name here!')
-    } else  {
-        try {
+const axios = require("axios");
+const redditPostToEmbed = require("../utils/redditPostToEmbed");
  
-        const json = await axios.get(`https://www.reddit.com/r/${mes}/top.json?limit=1`).then(function (response) {
-            // handle success
-            text = response.data.data.children[0].data
+async function find(message) {
+  let mes = message.content.slice(11);
+  let args = mes.split(" ");
 
-            const extension = ['.jpg', '.png', '.svg']
-            const date = new Date(text.created_utc * 1000)
-            let image
-            let pre
-            let des
-
-            if (text.selftext.length > 1000) {
-                 des = text.selftext.substring(0, 999) + '...'
-            }
-
-            if (text.preview !== undefined) {
-                pre = text.preview.images[0].source.url
-            }
-
-            if (extension.includes(text.url.slice(-4))) {
-                image = text.url
-            } else if (pre !== null) {
-                image = pre
-            } else {
-                image = null
-            }
-
-                const embed = {
-                    title: `${text.title}`,
-                    url: `https://www.reddit.com${text.permalink}`,
-                    author: {
-                        name: text.author,
-                        icon_url: "https://i.kym-cdn.com/photos/images/newsfeed/000/919/691/9e0.png"
-                    },
-                    description: des,
-                    timestamp: date,
-                    image: {
-                        url: image
-                    },
-                    color: 16729344,
-                    footer: {
-                    text: 'Reddit Bot by SerekKiri & MiXerek',
-                    icon_url: "https://cdn.discordapp.com/avatars/485047416291065859/ac0087022698709d0c7b26361e056bf9.png?size=256"
-                    },
-                }
-              message.channel.send({ embed })
-          })
-        } catch(Error) {
-            console.log(Error)
-            message.reply(`No subreddits named **${mes}** :confused: `)
-        }      
+  if (mes === "") {
+    message.reply("You need to type subreddit name here!");
+  } else {
+   try {
+    if (args[1] <= 10) {
+        let res
+        if(args[1] === null) {
+            res = await axios.get(
+                `https://www.reddit.com/r/${args[0]}/top.json?limit=1`
+              );
+        } else {
+            res = await axios.get(
+                `https://www.reddit.com/r/${args[0]}/top.json?limit=${args[1]}`
+              );
+        }
+      
+  
+      const posts = res.data.data.children;
+      if (posts.lenght == 0) {
+        message.reply(`Nothing new in **${args[0]}** :confused: `);
+        return;
+      } 
+  
+      for (const post of posts) {
+          const embed = redditPostToEmbed(post)
+          message.channel.send( { embed } )
+      }
+    } else {
+      message.reply(`I can't send you more then **10** messages :confused:`)
+    } 
+    
+   } catch(Error) {
+        console.log(Error)
+        message.reply(`No subreddits named **${mes}** :confused: `)
+        }
     }
-}
+  }
 
-module.exports = top
+module.exports = find;
