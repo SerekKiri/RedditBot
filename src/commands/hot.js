@@ -29,7 +29,6 @@ async function find(message) {
       } 
   
       for (const post of posts) {
-        console.log(post.data.over_18)
           if (post.data.over_18 === true && message.channel.nsfw === false) {
             message.reply(`This post is NSFW! Try get it on NSFW channel! :confused:`)
             } else {
