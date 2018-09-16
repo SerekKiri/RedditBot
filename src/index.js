@@ -54,6 +54,7 @@ client.on('message', async (message) => {
     if (message.content.startsWith(config.Prefix +  'random')) {
         random(message)
     }
+
 })
 
 
