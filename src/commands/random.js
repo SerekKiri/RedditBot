@@ -27,10 +27,10 @@ async function find(message) {
   
       for (const post of posts) {
         if (post.data.over_18 === true && message.channel.nsfw === false) {
-          message.reply(`This post is NSFW! Try get it on NSFW channel! :confused:`)
+          return message.reply(`This post is NSFW! Try get it on NSFW channel! :confused:`)
         } else {
           const embed = redditPostToEmbed(post)
-          message.channel.send( { embed } )
+          return message.channel.send( { embed } )
         }
       }
     } else {
