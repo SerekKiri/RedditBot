@@ -18,7 +18,7 @@ To run this bot you need:
     ```
     npm install
     ```
-4. Now enter to ``/src/``
+4. Now enter ``/src/``
     ```
     cd  your_direction/RedditBot/src
     ```
