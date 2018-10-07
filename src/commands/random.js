@@ -6,7 +6,7 @@ async function find(message) {
   let args = mes.split(" ");
 
    try {
-    if (args[0] <= 10 && args[0] == '') {
+    if (args[0] <= 10 || args[0] == '') {
         let res
         if (args[0] == '') {
             res = await axios.get(
