@@ -6,7 +6,9 @@ async function find(message) {
   let args = mes.split(" ");
 
    try {
-    if (args[0] <= 10 || args[0] == '') {
+    if (args[0] !== undefined && args[0] >= 10) {
+      message.reply(`I can't send you more then **10** messages :confused:`)
+    } else {
         let res
         if (args[0] == '') {
             res = await axios.get(
@@ -33,9 +35,7 @@ async function find(message) {
           message.channel.send( { embed } )
         }
       }
-    } else {
-      message.reply(`I can't send you more then **10** messages :confused:`)
-    } 
+    }
     
    } catch(Error) {
         console.log(Error)
