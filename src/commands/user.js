@@ -25,6 +25,7 @@ async function user(message) {
                     icon_url: `https://i.kym-cdn.com/photos/images/newsfeed/000/919/691/9e0.png`
                 },
                 description: text.subreddit.description,
+                color: 16729344,
                 fields: [
                     {
                         name: "Account Created:",
