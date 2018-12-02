@@ -9,7 +9,9 @@ async function find(message) {
     message.reply("You need to type subreddit name here!");
   } else {
    try {
-    if (args[1] <= 10 || args[1] == undefined) {
+    if (args[1] !== undefined && args[1] >= 10) {
+      message.reply(`I can't send you more then **10** messages :confused:`)
+    } else {
       let res
       if(args[1] === undefined) {
             res = await axios.get(
@@ -36,8 +38,6 @@ async function find(message) {
             message.channel.send( { embed } )
           }
       }
-    } else {
-      message.reply(`I can't send you more then **10** messages :confused:`)
     } 
     
    } catch(Error) {
