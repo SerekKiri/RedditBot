@@ -6,7 +6,7 @@ async function find(message) {
   let args = mes.split(" ");
 
    try {
-    if (args[1] !== undefined && args[1] >= 10) {
+    if (args[0] !== undefined && args[0] >= 10) {
       message.reply(`I can't send you more then **10** messages :confused:`)
     } else {
         let res
