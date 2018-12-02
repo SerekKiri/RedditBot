@@ -6,14 +6,7 @@ const client = new Discord.Client()
 // variables
 
 // commands imports
-const newPost = require('./commands/new')
-const help = require('./commands/help')
-const user = require('./commands/user')
-const top = require('./commands/top')
-const hot = require('./commands/hot')
-const github = require('./commands/github')
-const donate = require('./commands/donate')
-const random = require('./commands/random')
+const cmds = require('./commands/index')
 
 client.on('ready', () => {
   console.log(`Reddit Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`)
@@ -24,35 +17,35 @@ client.on('ready', () => {
 client.on('message', async (message) => {
 
     if (message.content.startsWith(config.Prefix + 'new')) {
-        newPost(message)
+        cmds.newPost(message)
     }
 
     if (message.content.startsWith(config.Prefix + 'top')) {
-        top(message)
+        cmds.top(message)
     }
 
     if (message.content.startsWith(config.Prefix + 'help')) {
-        help(message)
+        cmds.help(message)
     }
 
     if (message.content.startsWith(config.Prefix + 'user')) {
-        user(message)
+        cmds.user(message)
     }
 
     if (message.content.startsWith(config.Prefix + 'hot')) {
-        hot(message)
+        cmds.hot(message)
     }
 
     if (message.content.startsWith(config.Prefix + 'github')) {
-        github(message)
+        cmds.github(message)
     }
 
     if (message.content.startsWith(config.Prefix + 'donate')) {
-        donate(message)
+        cmds.donate(message)
     }
 
     if (message.content.startsWith(config.Prefix +  'random')) {
-        random(message)
+        cmds.random(message)
     }
 
 })

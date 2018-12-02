@@ -1,0 +1,8 @@
+module.exports.newPost = require('./new')
+module.exports.help = require('./help')
+module.exports.user = require('./user')
+module.exports.top = require('./top')
+module.exports.hot = require('./hot')
+module.exports.github = require('./github')
+module.exports.donate = require('./donate')
+module.exports.random = require('./random')
