@@ -9,8 +9,8 @@ async function find(message) {
     message.reply("You need to type subreddit name here!");
   } else {
    try {
-    if (args[1] !== undefined && args[1] >= 10) {
-      message.reply(`I can't send you more then **10** messages :confused:`)
+    if (args[1] !== undefined && args[1] > 10) {
+      message.reply(`I can't send you more than **10** messages :confused:`)
     } else {
         let res
         if(args[1] === undefined) {
