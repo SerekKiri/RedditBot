@@ -16,41 +16,11 @@ client.on('ready', () => {
 
 client.on('message', async (message) => {
 
-    if (message.content.startsWith(config.Prefix + 'new')) {
-        cmds.newPost(message)
+    try {
+        cmds.check(message)
+    } catch(err) {
+        console.log(err)
     }
-
-    if (message.content.startsWith(config.Prefix + 'top')) {
-        cmds.top(message)
-    }
-
-    if (message.content.startsWith(config.Prefix + 'help')) {
-        cmds.help(message)
-    }
-
-    if (message.content.startsWith(config.Prefix + 'user')) {
-        cmds.user(message)
-    }
-
-    if (message.content.startsWith(config.Prefix + 'hot')) {
-        cmds.hot(message)
-    }
-
-    if (message.content.startsWith(config.Prefix + 'github')) {
-        cmds.github(message)
-    }
-
-    if (message.content.startsWith(config.Prefix + 'donate')) {
-        cmds.donate(message)
-    }
-
-    if (message.content.startsWith(config.Prefix +  'random')) {
-        cmds.random(message)
-    }
-
 })
 
-
 client.login(config.BotToken)
-
-module.export = client

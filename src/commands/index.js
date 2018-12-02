@@ -1,8 +1,33 @@
-module.exports.newPost = require('./new')
-module.exports.help = require('./help')
-module.exports.user = require('./user')
-module.exports.top = require('./top')
-module.exports.hot = require('./hot')
-module.exports.github = require('./github')
-module.exports.donate = require('./donate')
-module.exports.random = require('./random')
+const config = require('../config/config.json')
+
+// requiring commands
+const newPost = require('./new')
+const help = require('./help')
+const user = require('./user')
+const top = require('./top')
+const hot = require('./hot')
+const github = require('./github')
+const donate = require('./donate')
+const random = require('./random')
+
+const commands = {
+    'new' : newPost,
+    'help' : help,
+    'user' : user,
+    'top' : top,
+    'hot' : hot,
+    'github' : github,
+    'donate' : donate,
+    'random' : random
+}
+
+module.exports.check = function(message) {
+    let args = message.content.slice(config.Prefix.length).split(" ")
+    if (message.content.startsWith(config.Prefix)) {
+        if(commands[args[0]] != undefined) {
+            return commands[args[0]](message)
+        } else {
+            return message.reply('This command doesn\'t exist! :<')
+        }
+    } 
+}
