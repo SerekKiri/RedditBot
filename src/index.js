@@ -10,8 +10,8 @@ const package = require('../package.json')
 const cmds = require('./commands/index')
 
 client.on('ready', () => {
-    const size = client.guilds.size.toString()
-    const users = client.users.size.toString()
+    const size = client.guilds.size
+    const users = client.users.size
 
     const presence = [
         "reddit help",
@@ -23,7 +23,7 @@ client.on('ready', () => {
     setInterval(() => {
         const random = Math.floor(Math.random() * (presence.length - 1) + 1);
         client.user.setActivity(presence[random]);
-    }, 2000)
+    }, 3000)
 });
 
 
