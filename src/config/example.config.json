@@ -1,4 +1,4 @@
 {
-    "BotToken": "your-bot-token-here",
-    "Prefix": "reddit "
+    "BotToken": "your_bot_token_here",
+    "Prefix": "prefix_here"
 }
