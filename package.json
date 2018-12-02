@@ -1,6 +1,6 @@
 {
   "name": "redditbot",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Discord bot for reddit.com",
   "main": "index.js",
   "scripts": {

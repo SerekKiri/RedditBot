@@ -9,6 +9,7 @@ const hot = require('./hot')
 const github = require('./github')
 const donate = require('./donate')
 const random = require('./random')
+const report = require('./issue')
 
 const commands = {
     'new' : newPost,
@@ -18,7 +19,8 @@ const commands = {
     'hot' : hot,
     'github' : github,
     'donate' : donate,
-    'random' : random
+    'random' : random,
+    'report' : report
 }
 
 module.exports.check = function(message) {
