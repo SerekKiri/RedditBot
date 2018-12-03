@@ -14,16 +14,18 @@ client.on('ready', () => {
     const users = client.users.size
 
     const presence = [
+        "reddit.com",
         "reddit help",
         package.version + " version",
         size + " servers",
         users + " users"
     ]
+
   console.log(`Reddit Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`)
     setInterval(() => {
         const random = Math.floor(Math.random() * (presence.length - 1) + 1);
         client.user.setActivity(presence[random]);
-    }, 3000)
+    }, 5000)
 });
 
 
