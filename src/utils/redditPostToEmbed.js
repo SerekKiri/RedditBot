@@ -1,6 +1,6 @@
 function redditPostToEmbed(post) {
   const text = post.data;
-  const extension = [".jpg", ".png", ".svg"];
+  const extension = [".jpg", ".png", ".svg", ".gif"];
   const date = new Date(text["created_utc"] * 1000);
   let image;
   let pre;
