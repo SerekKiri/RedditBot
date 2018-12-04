@@ -13,7 +13,7 @@ async function  update(message) {
                        - **New command named "update" that will help you understand what is going on with reddit bot**
 
                        Version 1.3.0
-                       - **Fixed bug "no description**
+                       - **Fixed bug "no description"**
                        - **Fixed bugs with videos in posts**`,
         color: 16729344,
         footer: {
