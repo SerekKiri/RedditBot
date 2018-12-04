@@ -1,4 +1,4 @@
-# RedditBot  [![Discord](https://discordapp.com/api/guilds/367325058353594378/embed.png)]()
+# RedditBot  [![Discord](https://discordapp.com/api/guilds/367325058353594378/embed.png)]() [![Travis](https://travis-ci.com/SerekKiri/RedditBot.svg?branch=master)]()
 ### Discord bot for reddit.com
 
 *Reddit API link [here](https://www.reddit.com/dev/api/)*
