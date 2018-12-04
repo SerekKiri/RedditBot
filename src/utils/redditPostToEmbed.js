@@ -1,23 +1,34 @@
 function redditPostToEmbed(post) {
   const text = post.data;
-  const extension = [".jpg", ".png", ".svg"];
+  const extension = [".jpg", ".png", ".svg", ".mp4"];
   const date = new Date(text["created_utc"] * 1000);
   let image;
   let pre;
+  let media;
   let des;
 
   if (text.selftext.length > 1000) {
     des = text.selftext.substring(0, 999) + "...";
+  } else {
+    des = text.selftext
   }
 
   if (text.preview !== undefined) {
     pre = text.preview.images[0].source.url;
   }
 
+  if (text.media !== null) {
+      media = text.media.oembed.thumbnail_url
+  }
+
   if (extension.includes(text.url.slice(-4))) {
     image = text.url;
-  } else if (pre !== null) {
-    image = pre;
+  } else if (pre !== null || media !== null) {
+    if (media !== null) {
+        image = media;
+    } else {
+        image = pre;
+    }
   } else {
     image = null;
   }
