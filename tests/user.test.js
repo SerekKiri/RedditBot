@@ -4,6 +4,6 @@ test('User api status', () => {
     if('should load data about user', async () => {
         const data = await user.user('Bekowy')
         expect(data).toBeDefined()
-        expect(data.entity.name).toEqual('')
+        expect(data.name).toEqual('Bekowy')
     });
 });
