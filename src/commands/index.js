@@ -11,6 +11,7 @@ const donate = require('./donate')
 const random = require('./random')
 const report = require('./issue')
 const update = require('./update')
+const invite = require('./invite')
 
 const commands = {
     'new' : newPost,
@@ -23,6 +24,7 @@ const commands = {
     'random' : random,
     'report' : report,
     'update' : update
+    'invite' : invite
 }
 
 module.exports.check = function(message) {
