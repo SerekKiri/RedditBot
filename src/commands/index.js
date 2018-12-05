@@ -23,7 +23,7 @@ const commands = {
     'donate' : donate,
     'random' : random,
     'report' : report,
-    'update' : update
+    'update' : update,
     'invite' : invite
 }
 
