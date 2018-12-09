@@ -14,6 +14,7 @@ async function help(message) {
                       - github (If you want to check the source code, you can take a look :eyes:)
                       - donate (If you want you can support us to help us handle hosting costs)
                       - invite (If you want to invite me on your server just use this command)
+                      - discord (RedditBot support server)
                       ----------------------------------------
                       **Reddit commands:**
                       - new [subreddit name] <Number of posts>
