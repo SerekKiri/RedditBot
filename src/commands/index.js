@@ -13,6 +13,7 @@ const report = require('./issue')
 const update = require('./update')
 const invite = require('./invite')
 const discord = require('./discord')
+const patreon = require('./patreon')
 
 const commands = {
     'new' : newPost,
@@ -26,7 +27,8 @@ const commands = {
     'report' : report,
     'update' : update,
     'invite' : invite,
-    'discord' : discord
+    'discord' : discord,
+    'patreon': patreon
 }
 
 module.exports.check = function(message) {

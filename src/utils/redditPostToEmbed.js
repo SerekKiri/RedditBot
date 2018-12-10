@@ -53,7 +53,7 @@ function redditPostToEmbed(post) {
     footer: {
       text: "Reddit Bot by SerekKiri & MiXerek",
       icon_url:
-        "https://cdn.discordapp.com/avatars/485047416291065859/f35f53c6eea1e68b00b2dd9c8d0f683e.png"
+        "https://hackbrightacademy.com/content/uploads/2018/08/Reddit-logo.png"
     }
   };
   return embed;

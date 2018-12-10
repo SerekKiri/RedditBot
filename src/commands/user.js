@@ -39,7 +39,11 @@ async function user(message) {
                         name: 'Karma:',
                         value: `${text.link_karma}`,
                       }
-                ]
+                ],
+                footer: {
+                    text: 'Reddit Bot by SerekKiri & MiXerek',
+                    icon_url: "https://hackbrightacademy.com/content/uploads/2018/08/Reddit-logo.png"
+                },
             }
             message.channel.send({ embed })
         })
