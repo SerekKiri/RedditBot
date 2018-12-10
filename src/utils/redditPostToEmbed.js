@@ -53,7 +53,7 @@ function redditPostToEmbed(post) {
     footer: {
       text: "Reddit Bot by SerekKiri & MiXerek",
       icon_url:
-        "https://cdn.discordapp.com/avatars/485047416291065859/ac0087022698709d0c7b26361e056bf9.png?size=256"
+        "https://cdn.discordapp.com/avatars/485047416291065859/f35f53c6eea1e68b00b2dd9c8d0f683e.png"
     }
   };
   return embed;
