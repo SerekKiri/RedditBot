@@ -1,3 +1,6 @@
+const TurndownService = require('turndown')
+const turndownService = new TurndownService()
+
 function redditPostToEmbed(post) {
   const text = post.data;
   const extension = [".jpg", ".png", ".svg", ".mp4", ".gif"];
@@ -41,7 +44,7 @@ function redditPostToEmbed(post) {
       icon_url:
         "https://i.kym-cdn.com/photos/images/newsfeed/000/919/691/9e0.png"
     },
-    description: des,
+    description: turndownService.turndown(des),
     timestamp: date,
     image: {
       url: image
