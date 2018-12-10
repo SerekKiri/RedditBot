@@ -1,6 +1,6 @@
 {
   "name": "redditbot",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "Discord bot for reddit.com",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "reddit"
   ],
   "author": "SerekKiri & MiXerek",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
     "bufferutil": "^3.0.3",
