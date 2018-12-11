@@ -54,7 +54,19 @@ function redditPostToEmbed(post) {
       text: "Reddit Bot by SerekKiri & MiXerek",
       icon_url:
         "https://hackbrightacademy.com/content/uploads/2018/08/Reddit-logo.png"
-    }
+    },
+    "fields": [
+      {
+        "name": `⬆️ Upvoted by`,
+        "value": `${text.ups} people`,
+        "inline": true
+      },
+      {
+        "name": `💬 Commented by`,
+        "value": `${text.num_comments} people`,
+        "inline": true
+      }
+    ]
   };
   return embed;
 };

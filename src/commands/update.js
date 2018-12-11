@@ -10,8 +10,7 @@ async function  update(message) {
             "https://i.kym-cdn.com/photos/images/newsfeed/000/919/691/9e0.png"
         },
         description: ` Version ${package.version}
-                       - **New patreon command**
-                       - **Fixed missing icon in footer**
+                       - **Now you can check how many upvotes and comments have post without leaving discord!**
                      `,
         color: 16729344,
         footer: {
