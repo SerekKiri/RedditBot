@@ -1,12 +1,12 @@
-const axios = require("axios");
-const redditPostToEmbed = require("../utils/redditPostToEmbed");
+const axios = require("axios")
+const redditPostToEmbed = require("../utils/redditPostToEmbed")
  
 async function find(message) {
-  let mes = message.content.slice(11);
-  let args = mes.split(" ");
+  let mes = message.content.slice(11)
+  let args = mes.split(" ")
 
   if (mes === "") {
-    message.reply("You need to type subreddit name here!");
+    message.reply("You need to type subreddit name here!")
   } else {
    try {
     if (args[1] !== undefined && args[1] > 10) {
@@ -16,18 +16,17 @@ async function find(message) {
       if(args[1] === undefined) {
             res = await axios.get(
                 `https://www.reddit.com/r/${args[0]}/new.json?limit=1`
-              );
+              )
         } else {
             res = await axios.get(
                 `https://www.reddit.com/r/${args[0]}/new.json?limit=${args[1]}`
-              );
+              )
         }
       
   
-      const posts = res.data.data.children;
-      if (posts.lenght == 0) {
-        message.reply(`Nothing new in **${args[0]}** :confused: `);
-        return;
+      const posts = res.data.data.children
+      if (posts.length == 0) {
+        return message.reply(`Nothing new in **${args[0]}** :confused: `)
       } 
   
       for (const post of posts) {
@@ -47,4 +46,4 @@ async function find(message) {
     }
   }
 
-module.exports = find;
+module.exports = find
