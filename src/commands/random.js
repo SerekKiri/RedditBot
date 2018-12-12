@@ -9,19 +9,10 @@ async function find(message) {
     if (args[0] !== undefined && args[0] > 10) {
       message.reply(`I can't send you more than **10** messages :confused:`)
     } else {
-        let res
-        if (args[0] == '') {
-            res = await axios.get(
-                `https://www.reddit.com/r/random/top.json?limit=1`
-              );
-        } else {
-            res = await axios.get(
-                `https://www.reddit.com/r/random/top.json?limit=${args[0]}`
-              );
-        }
-      
-  
-      const posts = res.data.data.children;
+          let res = await axios.get(
+            `https://www.reddit.com/r/random/top.json?limit=1`
+          );
+          const posts = res.data.data.children;
       if (posts.lenght == 0) {
         message.reply(`Nothing new in **${args[0]}** :confused: `);
         return;
