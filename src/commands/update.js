@@ -10,7 +10,7 @@ async function  update(message) {
             "https://i.kym-cdn.com/photos/images/newsfeed/000/919/691/9e0.png"
         },
         description: ` Version ${package.version}
-                       - **Now you can check how many upvotes and comments have post without leaving discord!**
+                       - **Fixed "no messages" on empty subreddits**
                      `,
         color: 16729344,
         footer: {
