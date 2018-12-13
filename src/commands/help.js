@@ -4,7 +4,7 @@ async function help(message) {
         author: {
             name: 'Reddit Bot',
             url: 'https://github.com/SerekKiri/RedditBot',
-            icon_url: "https://cdn.discordapp.com/avatars/485047416291065859/ac0087022698709d0c7b26361e056bf9.png"
+            icon_url: "https://i.kym-cdn.com/photos/images/newsfeed/000/919/691/9e0.png"
         },
         description: `**Prefix: reddit**\n
 **Commands:**
