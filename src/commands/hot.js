@@ -26,7 +26,7 @@ async function find(message) {
   
       const posts = res.data.data.children;
       if (posts.length == 0) {
-        return message.reply(`Nothing new in **${args[0]}** :confused: `)
+        return message.reply(`There are no hot posts on **${args[0]}** :confused: `)
       } 
   
       for (const post of posts) {
