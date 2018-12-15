@@ -25,7 +25,7 @@ client.on('ready', () => {
     setInterval(() => {
         const random = Math.floor(Math.random() * (presence.length - 1) + 1);
         client.user.setActivity(presence[random]);
-    }, 5000)
+    }, 7000)
 });
 
 
