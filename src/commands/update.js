@@ -1,18 +1,17 @@
+const TurndownService = require('turndown')
+const turndownService = new TurndownService()
 const package = require('./../../package.json')
 
 async function  update(message) {
     const embed = {
-        title: `Change log:`,
-        url: `https://github.com/SerekKiri/RedditBot`,
         author: {
-          name: 'Reddit Bot',
+          name: 'Trello',
+          url: 'https://trello.com',
           icon_url:
-            "https://i.kym-cdn.com/photos/images/newsfeed/000/919/691/9e0.png"
+            "https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/trello-512.png"
         },
-        description: ` Version ${package.version}
-- **Fixed messages on empty subreddits**
-                     `,
-        color: 16729344,
+        description: `[Check info about updates on our board here!](https://trello.com/b/pPUq9UYI)`,
+        color: 31167,
         footer: {
           text: "Reddit Bot by SerekKiri & MiXerek",
           icon_url:
