@@ -15,7 +15,7 @@ client.on('ready', () => {
 
     const presence = [
         "reddit.com",
-        "reddit help",
+        "Mention me for help",
         package.version + " version",
         size + " servers",
         users + " users"

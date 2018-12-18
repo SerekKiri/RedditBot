@@ -38,8 +38,14 @@ module.exports.check = function(message) {
     if (pref) {
         if(commands[args[0]] != undefined) {
             return commands[args[0]](message)
-        } else {
-            return message.reply('This command doesn\'t exist! :<')
         }
-    } 
+            else {
+                return message.reply('This command doesn\'t exist! :<')
+        }
+    }
+
+    if (message.content.startsWith('<@485047416291065859>')) {
+        help(message)
+    }
+
 }
