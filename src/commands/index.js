@@ -33,7 +33,9 @@ const commands = {
 
 module.exports.check = function(message) {
     let args = message.content.slice(config.Prefix.length).split(" ")
-    if (message.content.startsWith(config.Prefix)) {
+    const pref = message.content.toLowerCase().startsWith(config.Prefix)
+
+    if (pref) {
         if(commands[args[0]] != undefined) {
             return commands[args[0]](message)
         } else {

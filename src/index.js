@@ -30,7 +30,6 @@ client.on('ready', () => {
 
 
 client.on('message', async (message) => {
-
     try {
         cmds.check(message)
     } catch(err) {
