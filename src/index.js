@@ -4,7 +4,7 @@ const config = require('./config/config.json')
 const client = new Discord.Client()
 
 // variables
-const package = require('../package.json')
+const pkg = require('../package.json')
 
 // commands imports
 const cmds = require('./commands/index')
@@ -16,7 +16,7 @@ client.on('ready', () => {
     const presence = [
         "reddit.com",
         "Mention me for help",
-        package.version + " version",
+        pkg.version + " version",
         size + " servers",
         users + " users"
     ]

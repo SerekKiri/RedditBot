@@ -1,6 +1,6 @@
 const TurndownService = require('turndown')
 const turndownService = new TurndownService()
-const package = require('./../../package.json')
+const pkg = require('./../../package.json')
 
 async function  update(message) {
     const embed = {
