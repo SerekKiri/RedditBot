@@ -44,7 +44,7 @@ function redditPostToEmbed(post) {
       icon_url:
         "https://i.kym-cdn.com/photos/images/newsfeed/000/919/691/9e0.png"
     },
-    description: turndownService.turndown(des),
+    description: des,
     timestamp: date,
     image: {
       url: image
