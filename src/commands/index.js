@@ -36,8 +36,8 @@ module.exports.check = function(message) {
     const pref = message.content.toLowerCase().startsWith(config.Prefix)
 
     if (pref) {
-        if(commands[args[1]] != undefined) {
-            return commands[args[1]](message)
+        if(commands[args[0]] != undefined) {
+            return commands[args[0]](message)
         }
             else {
                 return message.reply('This command doesn\'t exist! :<')
