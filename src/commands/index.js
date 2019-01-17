@@ -36,7 +36,7 @@ module.exports.check = function(message) {
     const pref = message.content.toLowerCase().startsWith(config.Prefix)
 
     if (pref) {
-        if(commands[args[0] != undefined) {
+        if(commands[args[0]] != undefined) {
             return commands[args[0]](message)
         }
             else {
