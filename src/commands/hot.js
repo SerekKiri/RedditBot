@@ -15,11 +15,11 @@ async function find(message) {
       let res
       if(args[1] === undefined) {
             res = await axios.get(
-                `https://www.reddit.com/r/${args[0]}/hot.json?limit=1`
-              )
+                `https://www.reddit.com/r/${args[0]}/hot.json?limit=1&sort=new`
+              ) 
         } else {
             res = await axios.get(
-                `https://www.reddit.com/r/${args[0]}/hot.json?limit=${args[1]}`
+                `https://www.reddit.com/r/${args[0]}/hot.json?limit=${args[1]}&sort=new`
               )
         }
       
