@@ -21,7 +21,7 @@ function redditPostToEmbed(post) {
   }
 
   if (text.media !== null) {
-      media = text.media.oembed.thumbnail_url
+     media = text.thumbnail
   }
 
   if (extension.includes(text.url.slice(-4))) {
