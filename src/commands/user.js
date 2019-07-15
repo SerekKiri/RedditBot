@@ -37,7 +37,7 @@ async function user(message) {
                       },
                       {
                         name: 'Karma:',
-                        value: `${text.link_karma}`,
+                        value: `${text.link_karma + text.comment_karma}`,
                       }
                 ],
                 footer: {
