@@ -1,5 +1,6 @@
 const TurndownService = require('turndown')
 const turndownService = new TurndownService()
+const client = require('../client')
 
 function redditPostToEmbed(post) {
   const text = post.data;
@@ -57,12 +58,12 @@ function redditPostToEmbed(post) {
     },
     "fields": [
       {
-        "name": `⬆️ Upvoted by`,
+        "name": `${client.emojis.find(x => x.name === 'upvote')} Upvoted by`,
         "value": `${text.ups} people`,
         "inline": true
       },
       {
-        "name": `💬 Commented by`,
+        "name": `${client.emojis.find(x => x.name === 'comment')} Commented by`,
         "value": `${text.num_comments} people`,
         "inline": true
       }

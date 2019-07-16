@@ -1,8 +1,5 @@
-const Discord = require('discord.js')
 const config = require('./config/config.json')
-
-const client = new Discord.Client()
-
+const client = require('./client')
 // commands imports
 const cmds = require('./commands/index')
 
@@ -20,3 +17,5 @@ client.on('message', async (message) => {
 })
 
 client.login(config.BotToken)
+
+module.exports = client
