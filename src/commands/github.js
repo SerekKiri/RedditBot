@@ -14,8 +14,8 @@ async function git (message) {
         description: turndownService.turndown('<a href="https://github.com/SerekKiri/RedditBot">Reddit repository link</a>'),
         color: 2369838,
         footer: {
-          icon_url: 'https://hackbrightacademy.com/content/uploads/2018/08/Reddit-logo.png',
-          text: 'Reddit Bot by SerekKiri & MiXerek',
+          icon_url: 'https://raw.githubusercontent.com/fosscord/assets/master/PNG/1024x/cord-blue.png',
+          text: 'Reddit Bot by Fosscord Team',
         },
       }
       await message.channel.send({ embed })

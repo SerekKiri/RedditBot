@@ -13,8 +13,8 @@ async function donate (message) {
       description: turndownService.turndown('<a href="https://www.patreon.com/redibot">Join our team by supporting us!</a>'),
       color: 16345172,
       footer: {
-            text: 'Reddit Bot by SerekKiri & MiXerek',
-            icon_url: "https://hackbrightacademy.com/content/uploads/2018/08/Reddit-logo.png"
+            text: 'Reddit Bot by Fosscord Team',
+            icon_url: "https://raw.githubusercontent.com/fosscord/assets/master/PNG/1024x/cord-blue.png"
        },
     }
     await message.channel.send({ embed })

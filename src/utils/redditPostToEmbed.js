@@ -52,9 +52,9 @@ function redditPostToEmbed(post) {
     },
     color: 16729344,
     footer: {
-      text: "Reddit Bot by SerekKiri & MiXerek",
+      text: "Reddit Bot by Fosscord Team",
       icon_url:
-        "https://hackbrightacademy.com/content/uploads/2018/08/Reddit-logo.png"
+        "https://raw.githubusercontent.com/fosscord/assets/master/PNG/1024x/cord-blue.png"
     },
     "fields": [
       {

@@ -8,8 +8,8 @@ async function invite(message) {
                     description: turndownService.turndown(`<a href="https://discordapp.com/oauth2/authorize?client_id=485047416291065859&scope=bot&permissions=0">Click here to invite me!</a>`),
                     color: 16729344,
                     footer: {
-                    icon_url: 'https://hackbrightacademy.com/content/uploads/2018/08/Reddit-logo.png',
-                    text: 'Reddit Bot by SerekKiri & MiXerek',
+                    icon_url: 'https://raw.githubusercontent.com/fosscord/assets/master/PNG/1024x/cord-blue.png',
+                    text: 'Reddit Bot by Fosscord Team',
                 }
             }
 

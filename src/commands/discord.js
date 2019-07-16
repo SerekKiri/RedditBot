@@ -12,8 +12,8 @@ async function invite(message) {
                     description: turndownService.turndown(`<a href="https://discord.gg/7q5VcC6">Join support server</a>`),
                     color: 16729344,
                     footer: {
-                    icon_url: 'https://hackbrightacademy.com/content/uploads/2018/08/Reddit-logo.png',
-                    text: 'Reddit Bot by SerekKiri & MiXerek',
+                    icon_url: 'https://raw.githubusercontent.com/fosscord/assets/master/PNG/1024x/cord-blue.png',
+                    text: 'Reddit Bot by Fosscord Team',
                 }
             }
 

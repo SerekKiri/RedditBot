@@ -26,8 +26,8 @@ async function help(message) {
         timestamp: new Date(),
         color: 16729344,
         footer: {
-            text: 'Reddit Bot by SerekKiri & MiXerek',
-            icon_url: "https://hackbrightacademy.com/content/uploads/2018/08/Reddit-logo.png"
+            text: 'Reddit Bot by Fosscord Team',
+            icon_url: "https://raw.githubusercontent.com/fosscord/assets/master/PNG/1024x/cord-blue.png"
         },
     }
   await message.channel.send({ embed })

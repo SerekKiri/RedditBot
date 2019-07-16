@@ -13,9 +13,9 @@ async function  update(message) {
         description: `[Check info about updates on our board here!](https://trello.com/b/pPUq9UYI)`,
         color: 31167,
         footer: {
-          text: "Reddit Bot by SerekKiri & MiXerek",
+          text: 'Reddit Bot by Fosscord Team',
           icon_url:
-            "https://hackbrightacademy.com/content/uploads/2018/08/Reddit-logo.png"
+            "https://raw.githubusercontent.com/fosscord/assets/master/PNG/1024x/cord-blue.png"
         }
       }
       await message.channel.send({ embed })

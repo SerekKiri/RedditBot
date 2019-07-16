@@ -41,8 +41,8 @@ async function user(message) {
                       }
                 ],
                 footer: {
-                    text: 'Reddit Bot by SerekKiri & MiXerek',
-                    icon_url: "https://hackbrightacademy.com/content/uploads/2018/08/Reddit-logo.png"
+                    text: 'Reddit Bot by Fosscord Team',
+                    icon_url: "https://raw.githubusercontent.com/fosscord/assets/master/PNG/1024x/cord-blue.png"
                 },
             }
             message.channel.send({ embed })
