@@ -1,7 +1,7 @@
-const config = require('./config/config.json')
-const client = require('./client')
+const config = require('./src/config/config.json')
+const client = require('./src/client')
 // commands imports
-const cmds = require('./commands/index')
+const cmds = require('./src/commands/index')
 
 client.on('ready', () => {
   console.log(`Reddit Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`)
