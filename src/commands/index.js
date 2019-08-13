@@ -1,4 +1,5 @@
 const config = require('../config/config.json')
+const client = require('../client')
 
 // requiring commands
 const newPost = require('./new')
@@ -44,7 +45,7 @@ module.exports.check = function(message) {
         }
     }
 
-    if (message.content.startsWith('<@485047416291065859>')) {
+    if (message.isMentioned(client.user.id)) {
         help(message)
     }
 
