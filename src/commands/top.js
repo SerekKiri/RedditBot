@@ -34,7 +34,7 @@ async function find(message) {
           return message.reply(`This post is NSFW! Try get it on NSFW channel! :confused:`)
         } else {
           const embed = redditPostToEmbed(post)
-          message.channel.send( { embed } )
+          await message.channel.send( { embed } )
         }
       }
     } 

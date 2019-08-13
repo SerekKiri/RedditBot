@@ -22,29 +22,9 @@ async function find(message) {
                 `https://www.reddit.com/r/${args[0]}/new.json?limit=${args[1]}&sort=new`
               )
         }
-      
-  
+
       const posts = res.data.data.children
 
-      /* try {
-          if (posts.length > 1) {
-          message.react("👎")
-        } else {
-          message.react("👎")
-        } 
-       } catch(err) {
-        console.log(err)
-       } */
-      function reactionCheck (message) {
-            console.log(posts.length)
-            if (posts.length = 1) {
-              message.react("👎")
-            } else {
-
-            }
-        }
-       
-      // console.log(posts.length)
       if (posts.length == 0) {
         return message.reply(`Nothing new in **${args[0]}** :confused: `)
       } 
