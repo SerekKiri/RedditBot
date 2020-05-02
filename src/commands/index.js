@@ -1,5 +1,6 @@
 const config = require('../config/config.json')
 const client = require('../client')
+const log = require('../utils/log')
 
 // requiring commands
 const newPost = require('./new')
@@ -17,36 +18,36 @@ const discord = require('./discord')
 const patreon = require('./patreon')
 
 const commands = {
-    'new' : newPost,
-    'help' : help,
-    'user' : user,
-    'top' : top,
-    'hot' : hot,
-    'github' : github,
-    'donate' : donate,
-    'random' : random,
-    'report' : report,
-    'update' : update,
-    'invite' : invite,
-    'discord' : discord,
-    'patreon': patreon
+  new: newPost,
+  help: help,
+  user: user,
+  top: top,
+  hot: hot,
+  github: github,
+  donate: donate,
+  random: random,
+  report: report,
+  update: update,
+  invite: invite,
+  discord: discord,
+  patreon: patreon,
 }
 
-module.exports.check = function(message) {
-    let args = message.content.slice(config.Prefix.length).split(" ")
-    const pref = message.content.toLowerCase().startsWith(config.Prefix)
+module.exports.check = function (message) {
+  let args = message.content.slice(config.Prefix.length).split(' ')
+  const pref = message.content.toLowerCase().startsWith(config.Prefix)
 
-    if (pref) {
-        if(commands[args[0]] != undefined) {
-            return commands[args[0]](message)
-        }
-            else {
-                return message.reply('This command doesn\'t exist! :<')
-        }
+  if (pref) {
+    if (commands[args[0]] != undefined) {
+      return commands[args[0]](message)
+    } else {
+      log(`Doesn't exist `)
+      return message.reply("This command doesn't exist! :<")
     }
+  }
 
-    if (message.isMentioned(client.user.id)) {
-        help(message)
-    }
-
+  if (message.isMentioned(client.user.id)) {
+    help(message)
+    return
+  }
 }
